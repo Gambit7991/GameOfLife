@@ -2,10 +2,15 @@ window.onload=function(){
     createArrayButtons();
 }
 function createArrayButtons(){
-    for(let i = 0; i <(window.screen.height-150*2)/15; i++){
+for(let i = 0; i <(window.screen.height-150*2)/15; i++){
+        element    = document.createElement('div')
+        element.id = i;
+        element.style.width = '1519px';
+        document.getElementById('buttons').appendChild(element);
         for(let j = 0; j < (window.screen.width-150)/15; j++){
-            document.body.appendChild(createButton(i, j));
+            document.getElementById(i).appendChild(createButton(i, j));
         }
+        document.getElementById(i).appendChild(document.createElement('br'));
     }
 }
 function createButton(i, j){

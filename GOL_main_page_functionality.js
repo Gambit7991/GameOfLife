@@ -2,7 +2,7 @@ window.onload=function(){
     createArrayButtons();
 }
 function createArrayButtons(){
-for(let i = 0; i <(window.screen.height-150*2)/15; i++){
+    for(let i = 0; i <(window.screen.height-150*2)/15; i++){
         element    = document.createElement('div')
         element.id = i;
         element.style.width = '1519px';
@@ -12,6 +12,9 @@ for(let i = 0; i <(window.screen.height-150*2)/15; i++){
         }
         document.getElementById(i).appendChild(document.createElement('br'));
     }
+}
+function restartProgram(){
+    location.reload();
 }
 function createButton(i, j){
     let btn = document.createElement('button');
@@ -30,4 +33,4 @@ function buttonStart() {
     let temp = document.getElementById('startButton').value;
     document.getElementById('startButton').value = temp == 'Start' ?  'STOP' : 'Start' ;
     startGame();
-    }
+}

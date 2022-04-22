@@ -1,7 +1,8 @@
 function startGame(){
     if(document.getElementById('startButton').value == "STOP"){
         nextScreen(createDoubleArray());
-        setTimeout(startGame, 500);
+        document.getElementById('counter').value = document.getElementById('counter').value  * 1 + 1;
+        setTimeout(startGame, 200);
     }
 }
 function nextScreen(array){
@@ -32,7 +33,6 @@ function isGonnaBurn(array){
 }
 function finalArray(array){
     let arrayToReturn =[];
-//    alert(array);
     for(let i = 0;i<array.length;i++){
 	    let temp = [];
 	    for(let j = 0;j<array[i].length;j++){
